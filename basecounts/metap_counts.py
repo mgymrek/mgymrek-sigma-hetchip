@@ -51,7 +51,7 @@ for loc in loc_to_data:
     directions = [item>0.5 for item in loc_to_data[loc]["fracs"]]
     if directions.count(True) == len(directions) or directions.count(False) == len(directions):
         samedir = True
-    if metap/numtests <= PVAL_CUTOFF and samedir: signif = True
+    if metap*numtests <= PVAL_CUTOFF and samedir: signif = True
     sys.stdout.write("\t".join(map(str, ["chr17", loc, mark] + \
                                        loc_to_data[loc]["counts"] + \
                                        loc_to_data[loc]["pval"] + \
