@@ -10,7 +10,7 @@ except:
     sys.exit(1)
 
 loc_to_data = {} # loc -> pval, counts, frac
-PVAL_CUTOFF = 0.01
+PVAL_CUTOFF = 0.05
 
 for fname in filenames:
     with open(fname, "r") as f:
